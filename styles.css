@@ -44,3 +44,22 @@ h1 {
 }
 
 
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/*Estilo para el botón de reproducción*/
+#play-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
