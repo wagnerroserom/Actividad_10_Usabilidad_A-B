@@ -1,22 +1,22 @@
 # Actividad #10 - Evaluación de Usabilidad con Pruebas A/B
 
-Proyecto desarrollado para la materia **Interacción Humano-Computador (HCI)** en UTM Online.
+Actividad desarrollada para la materia **Interacción Humano-Computador (HCI)**.
 
-## 🎯 Objetivo
+## Objetivo
 
-Evaluar la usabilidad del botón "Seguir" en Spotify mediante una prueba A/B, comparando dos versiones del diseño.
+Con el presente se busca evaluar la usabilidad del botón "Seguir" en Spotify mediante una prueba A/B, comparando dos versiones del diseño.
 
-## 🎵 Artista seleccionado
+## Artista seleccionado
 
 Nelson Velasquez (música vallenato)
 
-## 🛠️ Tecnologías usadas
+## Tecnologías usadas
 
 - HTML
 - CSS
 - JavaScript
 
-## 📂 Archivos incluidos
+## Archivos incluidos
 
 - `index.html`: Página principal del test A/B
 - `styles.css`: Estilos visuales
@@ -24,11 +24,11 @@ Nelson Velasquez (música vallenato)
 - `gracias.html`: Página de agradecimiento
 - `informe-actividad-10.pdf`: Informe completo del estudio
 
-## 🔗 Enlace al proyecto
+## Enlace al proyecto
 
-Abre `index.html` en tu navegador para ver la prueba en funcionamiento.
+Abre https://wagnerroserom.github.io/Actividad_10_Usabilidad_A-B/
 
-## 👥 Autores
+## Autores
 
 - Arévalo Romero Víctor Hugo
 - Rosero Macías Wagner Antonio
