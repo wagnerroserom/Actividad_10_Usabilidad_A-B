@@ -1,21 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Gracias</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gracias por tu participación</title>
   <style>
-    /* Se implementan estilos simples para la página de agradecimiento */
-    body { 
-      font-family: sans-serif; 
-      text-align: center; 
-      margin-top: 50px; 
+    /* Estilos generales */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f8f0;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* Contenedor principal */
+    .container {
+      text-align: center;
+      background: white;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    /* Icono de agradecimiento */
+    .icon {
+      font-size: 60px;
+      color: #1DB954;
+      margin-bottom: 20px;
+    }
+
+    /* Título */
+    h2 {
+      font-size: 26px;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+
+    /* Texto descriptivo */
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* Botón para ir al formulario */
+    .btn-form {
+      background-color: #1DB954;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(29, 185, 84, 0.3);
+    }
+
+    .btn-form:hover {
+      background-color: #1ed760;
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(29, 185, 84, 0.4);
+    }
+
+    /* Pie de página */
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <!-- Mensaje de agradecimiento al participante -->
-  <h2>¡Gracias por participar en la prueba!</h2>
-  <p>Sus respuestas ayudan a mejorar la experiencia de usuario.</p>
-  <p>Tenga un excelente y bendecido día.</p>
-  <!-- Esta página se muestrará después de hacer clic en "Seguir" -->
+  <div class="container">
+    <!-- Emoji de música -->
+    <div class="icon">🎵</div>
+ 
+    <h2>¡Muchas gracias por tu participación!</h2>
+
+    <p>
+      Tu colaboración es fundamental para evaluar y mejorar la usabilidad de interfaces digitales.
+      <br><br>
+      Por favor, toma un momento para responder un breve cuestionario sobre tu experiencia.
+    </p>
+
+    <!-- Botón que abre el formulario de Google -->
+    <button class="btn-form" id="openForm">Ir al cuestionario</button>
+
+    <div class="footer">
+      Universidad que transforma, calidad que trasciende.<br>
+      Interacción Humano-Computador - Actividad #10
+    </div>
+  </div>
+
+  <script>
+    // Enlace al formulario de Google Forms
+    const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/13KgCu8XJqTObrrYn2sflOXl9OhfXGIBVAtFao15kRyg/viewform';
+
+    // Escuchar el clic en el botón
+    document.getElementById('openForm').addEventListener('click', function () {
+    
+      window.open(GOOGLE_FORM_URL, '_blank');
+
+      this.disabled = true;
+      this.textContent = 'Abriendo...';
+      setTimeout(() => {
+        this.textContent = '¡Gracias!';
+      }, 1000);
+    });
+  </script>
 </body>
 </html>

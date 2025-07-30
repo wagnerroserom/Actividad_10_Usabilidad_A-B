@@ -4,7 +4,7 @@
 //1: Con math.random() se generará un número entre 0 y 1. si es menor que 0.5 mostrará la versión A sino, la B
 const version = Math.random() < 0.5 ? 'A' : 'B';
 
-//2: Se obtiene el botón "Seguir del DOM (HTML)"
+//2: Se obtiene el botón "Segdeluir del DOM (HTML)"
 const followBtn = document.getElementById('follow-btn');
 
 //3: Inicio del temporizador
@@ -35,6 +35,11 @@ followBtn.addEventListener('click' , () => {
     //Se calcula el tiempo hasta hacer clic
     const elapsed = (Date.now() - starTime) / 1000;
 
+    //Guardamos datos clave
+    sessionStorage.setItem('version' , version);
+    sessionStorage.setItem('timeToClick', elapsed.toFixed(2));
+    sessionStorage.setItem('timestamp', new Date().toISOString());
+
     //Al usuario se le muestra una alerta con los resultados
     alert(`¡Gracias por participar, muy valiosa su colaboración!\nVersión: ${version}\nTiempo hasta clic: ${elapsed.toFixed(2)} segundos`);
 
@@ -42,10 +47,11 @@ followBtn.addEventListener('click' , () => {
     console.log({
         version: version,
         timeToClick: elapsed.toFixed(2),
+        timestamp: new Date().toISOString()
     });
 
     //Redirigimos a una página de agradecimiento
-     setTimeout(() => {
+    setTimeout(() => {
     window.location.href = 'gracias.html';
   }, 500); // Espera medio segundo antes de redirigir
 })
