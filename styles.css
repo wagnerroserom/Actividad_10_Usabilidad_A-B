@@ -100,3 +100,15 @@ h1 {
     transform: scale(1.1);
 }
 
+/*Aplicar efecto hover del botón B*/
+.btn-b:hover {
+    background-color: #1ed760;
+    transform: scale(1.12);
+}
+
+/*Estilo del tempoprizador*/
+#timer {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
