@@ -23,3 +23,30 @@ if (version === 'A') {
     followBtn.textContent = 'SEGUIR ARTISTA';
     followBtn.classList.add('btn-b');
 }
+
+//6: Se actualiza el temporizador cada 0.1 segundos
+setInterval(() => {
+    const elapsed = (Date.now() - starTime) / 1000; //Tiempo en segundos
+    timerDisplay.textContent = `Tiempo: ${elapsed.toFixed(1)} segundos`; //Muestra con un decimal
+}, 100);
+
+//7: Se implementa el sonido "clic" al pulsar el botón "Seguir"
+followBtn.addEventListener('click' , () => {
+    //Se calcula el tiempo hasta hacer clic
+    const elapsed = (Date.now() - starTime) / 1000;
+
+    //Al usuario se le muestra una alerta con los resultados
+    alert(`¡Gracias por participar, muy valiosa su colaboración!\nVersión: ${version}\nTiempo hasta clic: ${elapsed.toFixed(2)} segundos`);
+
+    //Con las siguientes lineas se registran los datos en consola
+    console.log({
+        version: version,
+        timeToClick: elapsed.toFixed(2),
+    });
+
+    //Redirigimos a una página de agradecimiento
+     setTimeout(() => {
+    window.location.href = 'gracias.html';
+  }, 500); // Espera medio segundo antes de redirigir
+})
+
